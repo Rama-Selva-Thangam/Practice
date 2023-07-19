@@ -129,6 +129,6 @@ body {
 
 .table tbody tr:hover {
   cursor: pointer;
-  background-color: rgb(110, 110, 110);
+  background-color: solid black;
   color: #fff;
 }
