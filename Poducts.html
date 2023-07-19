@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="ProductsStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="main-page" class="parent main-page active">
+        <div id="main-page-head" class="head">
+          <header>
+            <button type="button" id="main-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>PRODUCTS</h3>
+          </header>
+        </div>
+        <div id="main-page-search-div" class="search-div">
+          <input type="text" placeholder="search" />
+          <button type="button" id="main-search-cancel" class="cancel-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div id="main-page-child" class="child">
+          <table id="products-table" class="table">
+            <thead>
+              <tr>
+                <th>SI.NO</th>
+                <th>PRODUCT NAME</th>
+                <th>WHOLESALE PRICE</th>
+                <th>RETAIL PRICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>product_name1</td>
+                <td>10</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>product_name2</td>
+                <td>100</td>
+                <td>96</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="new-product-add-btn" class="add-btn">
+            <i class="fa-solid fa-plus fa-beat-fade"></i>
+          </button>
+        </div>
+      </div>
+      <div id="edit-page" class="parent edit-page">
+        <div id="edit-page-head" class="head">
+          <header>
+            <button type="button" id="edit-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>EDIT PRODUCT</h3>
+          </header>
+        </div>
+        <div id="edit-page-child" class="child">
+          <form id="edit-form" action="">
+            <h4>EDIT</h4>
+            <div class="form-div">
+              <div class="label-div">
+                <label for="edit-product-name">PRODUCT NAME : </label>
+                <label for="edit-wholesale-price">WHOLESALE PRICE : </label>
+                <label for="edit-retail-price">RETAIL PRICE : </label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="text"
+                  id="edit-product-name"
+                  name="edit-product-name"
+                />
+                <input
+                  type="number"
+                  id="edit-wholesale-price"
+                  name="edit-wholesale-price"
+                  min="0"
+                  step="0.01"
+                />
+                <input
+                  type="number"
+                  id="edit-retail-price"
+                  name="edit-retail-price"
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+            </div>
+
+            <div class="form-btn">
+              <button type="submit" id="edit-save" class="normal save">
+                SAVE
+              </button>
+              <button type="button" id="edit-delete" class="normal delete">
+                DELETE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="add-new-product-page" class="parent add-new-product-page">
+        <div id="add-new-product-page-head" class="head">
+          <header>
+            <button
+              type="button"
+              id="add-new-product-page-back-btn"
+              class="back-btn"
+            >
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>ADD PRODUCT</h3>
+          </header>
+        </div>
+        <div id="add-new-product-page-child" class="child">
+          <form id="add-form" action="">
+            <h4>ADD</h4>
+            <div class="form-div">
+              <div class="label-div">
+                <label for="new-product-name">PRODUCT NAME : </label>
+                <label for="new-wholesale-price">WHOLESALE PRICE : </label>
+                <label for="new-retail-price">RETAIL PRICE : </label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="text"
+                  id="new-product-name"
+                  name="new-product-name"
+                  placeholder="New Product"
+                />
+                <input
+                  type="number"
+                  id="new-wholesale-price"
+                  name="new-wholesale-price"
+                  min="0"
+                  step="0.01"
+                  placeholder="New WholeSale Price"
+                />
+                <input
+                  type="number"
+                  id="new-retail-price"
+                  name="new-retail-price"
+                  min="0"
+                  step="0.01"
+                  placeholder="New Retail Price"
+                />
+              </div>
+            </div>
+
+            <div class="form-btn">
+              <button type="submit" id="new-save" class="normal save">
+                SAVE
+              </button>
+              <button type="button" id="new-delete" class="normal delete">
+                DELETE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="Productsjs.js"></script>
+  </body>
+</html>

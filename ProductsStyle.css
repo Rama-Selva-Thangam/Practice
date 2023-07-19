@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+.container {
+  margin: 0.2em;
+  padding: 0.2em;
+  height: 100%;
+}
+
+.head {
+  margin: 0.3em;
+  padding: 0.3em;
+  border-bottom: 1px solid black;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.head header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.head header h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.search-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+.search-div input {
+  width: 90%;
+}
+.child{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#new-product-add-btn {
+  position: fixed;
+  bottom: 6em;
+  right: 6em;
+  z-index: 1;
+  height: 3em;
+  width: 3em;
+  background-color: #ff594d;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#new-product-add-btn:hover {
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #4caf50;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.table {
+  width: 100%;
+  margin: 0.3em;
+  border-collapse: collapse;
+}
+
+.table thead {
+  position: sticky;
+}
+.table tr{
+  width: 100%;
+}
+.table thead th {
+  padding: 0.3em;
+  text-align: center;
+  background-color: #bbbbbb;
+  font-weight: bold;
+}
+
+.table tbody tr td{
+  padding: 0.3em;
+  margin: 0.4em;
+  text-align: center;
+  border-bottom: 1px solid rgb(88, 85, 85);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  cursor: pointer;
+  background-color: #757575;
+  color: #fff;
+}
+form{
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form .form-div{
+  display: flex;
+}
+form .label-div{
+  margin-right: 0.3em;
+}
+form .input-div{
+width: 55%;
+}
+form label{
+  margin-top: 0.4em;
+}
+form input{
+  width: 100%;
+}
+form label,form input{
+  white-space: nowrap;
+  height: 2em;
+  display: block;
+  margin-bottom: 3em;
+}
+form h4{
+  text-align: center;
+  margin: 1em;
+}
+.form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-btn button{
+  margin: 1em;
+}
+form div button:hover {
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  transform: scale(1.1);
+  transition: 0.3s;
+  background-color: #ff3c3c;
+}
+.input-change-btn{
+  width: 2em;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.3em;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-page,
+.edit-page,
+.add-new-product-page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  #new-product-add-btn {
+    bottom: 2em;
+    right: 2em;
+  }
+  .child {
+   
+    width: 100%;
+  }
+  form{
+    margin:5% 1% ;
+  }
+  
+}
+
+.cancel-btn,
+.add-btn,
+.normal {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete {
+  background-color: #ec3b3b;
+}
+.cancel-btn:hover,
+.add-btn:hover,
+.normal:hover {
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  scale: 1.1;
+  transition: 0.3s;
+  background-color: #bc52ee;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #f2f2f2;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+

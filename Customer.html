@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUSTOMER</title>
+    <link rel="stylesheet" href="CustomerStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="main-page" class="parent main-page active">
+        <div id="main-page-head" class="head">
+          <header>
+            <button type="button" id="main-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>CUSTOMERS</h3>
+          </header>
+        </div>
+        <div id="main-page-search-div" class="search-div">
+          <input type="text" placeholder="search" />
+          <button type="button" id="cancel-btn" class="cancel-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div id="main-page-child" class="child">
+          <table id="customer-table" class="table">
+            <thead>
+              <tr>
+                <th>SI.NO</th>
+                <th>CUSTOMER NAME</th>
+                <th>SHOP NAME</th>
+                <th>SHOP TYPE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>customer_name1</td>
+                <td>shop_name</td>
+                <td>shop_type</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>customer_name2</td>
+                <td>shop_name</td>
+                <td>shop_type</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-new-cutomer-btn" class="add-btn">
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div id="detail-page" class="parent detail-page">
+        <div id="detail-page-head" class="head">
+          <header>
+            <button type="button" id="detail-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>CUSTOMER DETAIL</h3>
+          </header>
+        </div>
+        <div id="detail-page-child-div" class="child">
+          <div id="img-div">
+            <img src="dummy_2.png" id="customer-image" alt="customer image" />
+          </div>
+          <div id="customer-name-div">
+            <label for="customer-name">CUSTOMER NAME : </label>
+            <h4 id="customer-name">customer_name</h4>
+          </div>
+          <div id="customer-shop-name-div">
+            <label for="customer-shop-name">SHOP NAME : </label>
+            <h4 id="customer-shop-name">shop-name</h4>
+          </div>
+          <div id="customer-shop-type-div">
+            <label for="customer-shop-type-label">SHOP TYPE : </label>
+            <h4>WHOLE SALE</h4>
+          </div>
+          <div id="customer-mobile-number-div">
+            <label for="customer-mobile-number-label">MOBILE NUMBER :</label>
+            <h4 id="customer-mobile-number-label">mobile-number</h4>
+          </div>
+          <div id="customer-address-div">
+            <label for="customer-address">ADDRESS : </label>
+            <address id="customer-address">
+              door_no,street_name,village_name,pin_code
+            </address>
+          </div>
+          <div id="detail-page-btn">
+            <button type="button" id="customer-edit" class="normal save">
+              EDIT
+            </button>
+            <button type="button" id="customer-delete" class="normal delete">
+              DELETE
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="edit-page" class="parent edit-page">
+        <div id="edit-page-head" class="head">
+          <header>
+            <button type="button" id="edit-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>EDIT CUSTOMER DETAIL</h3>
+          </header>
+        </div>
+        <div id="edit-page-child" class="child">
+          <form action="">
+            <h3>EDIT</h3>
+            <div class="form-div">
+              <div class="label-div">
+                <label for="edit-customer-name">CUSTOMER NAME : </label>
+                <label for="edit-customer-mobile-number"
+                  >CUSTOMER NUMBER :
+                </label>
+                <label for="edit-customer-shop-name">SHOP NAME : </label>
+                <label for="edit-customer-shop-type">SHOP TYPE : </label>
+                <label for="edit-customer-address">ADDRESS : </label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="text"
+                  id="edit-customer-name"
+                  placeholder="Customer Name"
+                />
+                <input
+                  type="tel"
+                  id="edit-customer-mobile-number"
+                  placeholder="Mobile Number"
+                />
+                <input
+                  type="text"
+                  id="edit-customer-shop-name"
+                  placeholder="Shop Name"
+                />
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="edit-customer-shop-type"
+                    value="wholesale"
+                  />
+                  <h5>WHOLE SALE</h5>
+                  <input
+                    type="radio"
+                    name="edit-customer-shop-type"
+                    value="retail"
+                  />
+                  <h5>RETAIL</h5>
+                </div>
+
+                <address>
+                  <textarea
+                    name="edit-customer-address"
+                    id="edit-customer-address"
+                    cols="30"
+                    rows="5"
+                  >
+                  </textarea>
+                </address>
+              </div>
+            </div>
+            <div class="form-btn">
+              <button type="submit" id="edit-save" class="normal save">
+                SAVE
+              </button>
+              <button type="button" id="edit-delete" class="normal delete">
+                CANCEL
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="add-page" class="parent add-page">
+        <div id="add-page-head" class="head">
+          <header>
+            <button type="button" id="add-page-back-btn" class="back-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>ADD NEW CUSTOMER</h3>
+          </header>
+        </div>
+        <div id="add-page-child" class="child">
+          <form id="add-form" action="">
+            <h3>ADD</h3>
+            <div class="form-div">
+              <div class="label-div">
+                <label for="add-customer-name">CUSTOMER NAME : </label>
+                <label for="add-customer-mobile-number"
+                  >CUSTOMER NUMBER :
+                </label>
+                <label for="add-customer-shop-name">SHOP NAME : </label>
+                <label for="add-customer-shop-type">SHOP TYPE : </label>
+                <label for="add-customer-address">ADDRESS : </label>
+              </div>
+              <div class="input-div">
+                <input
+                  type="text"
+                  id="add-customer-name"
+                  placeholder="Customer Name"
+                />
+                <input
+                  type="tel"
+                  id="add-customer-mobile-number"
+                  placeholder="Mobile Number"
+                />
+                <input
+                  type="text"
+                  id="add-customer-shop-name"
+                  placeholder="Shop Name"
+                />
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="add-customer-shop-type"
+                    value="wholesale"
+                  />
+                  <h5>WHOLE SALE</h5>
+
+                  <input
+                    type="radio"
+                    name="add-customer-shop-type"
+                    value="retail"
+                  />
+                  <h5>RETAIL</h5>
+                </div>
+
+                <address>
+                  <textarea
+                    name="add-customer-address"
+                    id="add-customer-address"
+                    cols="30"
+                    rows="5"
+                  >
+                  </textarea>
+                </address>
+              </div>
+            </div>
+            <div class="form-btn">
+              <button type="submit" id="add-save" class="normal save">
+                SAVE
+              </button>
+              <button type="button" id="add-delete" class="normal delete">
+                CANCEL
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="customerjs.js"></script>
+  </body>
+</html>

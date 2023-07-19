@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+.container {
+  margin: 0.2em;
+  padding: 0.2em;
+  height: 100%;
+}
+
+.head {
+  margin: 0.3em;
+  padding: 0.3em;
+  border-bottom: 1px solid black;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.head header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.head header h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.search-div input {
+  width: 90%;
+}
+#cancel-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.child {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#add-new-cutomer-btn {
+  position: fixed;
+  bottom: 4em;
+  right: 4em;
+  z-index: 1;
+  height: 3em;
+  width: 3em;
+  background-color: #eb3c2f;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#add-new-cutomer-btn:hover {
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #4caf50;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.table {
+  width: 100%;
+  margin: 0.3em;
+  border-collapse: collapse;
+  text-overflow: ellipsis;
+}
+.table thead th {
+  padding: 0.3em;
+  text-align: center;
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table tbody tr td {
+  padding: 0.3em;
+  margin: 0.2em;
+  text-align: center;
+  border-bottom: 1px solid rgb(88, 85, 85);
+}
+.table tbody tr:hover {
+  cursor: pointer;
+}
+.detail-page .child {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.detail-page .child div {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+}
+#img-div {
+  padding: 0.4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-page #customer-image {
+  border-radius: 50%;
+  width: 11em;
+  height: 11em;
+}
+.detail-page .child div label {
+  display: flex;
+  width: 50%;
+}
+.detail-page .child div h4 {
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  margin-left: 4em;
+}
+#detail-page-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.detail-page button {
+  margin: 0.6em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+form .form-div {
+  display: flex;
+}
+form .form-div .label-div {
+  width: 40%;
+}
+form .form-div .input-div {
+  width: 40%;
+  margin-left: 1em;
+}
+.radio {
+  display: flex;
+}
+form label {
+  height: 2em;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 2em;
+  margin-top: 0.4em;
+}
+form h5 {
+  white-space: nowrap;
+  margin-right: 1.5em;
+  margin-left: 0.5em;
+}
+form input {
+  margin-bottom: 2em;
+  width: 100%;
+}
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-btn button {
+  margin: 1em;
+}
+form div button:hover {
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  transform: scale(1.1);
+  transition: 0.3s;
+  background-color: #a628e0;
+}
+.main-page,
+.detail-page,
+.edit-page,
+.add-page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+@media (max-width: 768px) {
+  #new-product-add-btn {
+    bottom: 2em;
+    right: 2em;
+  }
+  .child {
+    width: 100%;
+  }
+  form {
+    margin: 5% 1%;
+  }
+}
+
+.cancel-btn,
+.add-btn,
+.normal {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete {
+  background-color: #ec3b3b;
+}
+.cancel-btn:hover,
+.add-btn:hover,
+.normal:hover {
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  scale: 1.1;
+  transition: 0.3s;
+  background-color: #a628e0;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #f2f2f2;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

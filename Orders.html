@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORDERS</title>
+    <link rel="stylesheet" href="OrdersStyle.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-page" class="parent main-page active">
+        <div class="head">
+          <header id="main-page-header" class="head">
+            <button type="button" id="main-page-back-btn" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>ORDERS</h3>
+          </header>
+        </div>
+        <div class="child">
+          <div class="search-div">
+            <input type="text" id="search" placeholder="search" />
+            <button type="button" id="search-cancel-btn" class="cancel-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <table id="order-table" class="table">
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>ORDER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>customer_1</td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-new-order-btn" class="add-new-btn">
+            <i class="fa-solid fa-cart-plus fa-beat-fade"></i>
+          </button>
+        </div>
+      </div>
+      <div id="order-page" class="parent order-page">
+        <div class="head">
+          <header id="order-page-header" class="head">
+            <button type="button" id="order-page-back-btn" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>ORDERED BY</h3>
+          </header>
+        </div>
+        <div class="child">
+          <div class="custoner-detail">
+            <img id="customer-name" src="dummy_2.png" alt="customer_image" />
+            <label for="customer-name">CUSTOMER NAME</label>
+            <button type="button" id="add-new-order-btn-1" class="add-new-btn">
+                <i class="fa-solid fa-cart-plus fa-beat-fade"></i>
+            </button>
+          </div>
+          <div id="exist-product-search-div">
+            <input
+              type="text"
+              id="exist-product-input"
+              placeholder="Product Name"
+            />
+            <button
+              type="button"
+              id="exist-product-search-cancel-btn"
+              class="cancel-btn"
+            >
+            <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <table id="products-table" class="table">
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>PRODUCT</th>
+                <th>QUANTITY</th>
+                <th>TOTAL</th>
+                <th>DATE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>product_name</td>
+                <td>10</td>
+                <td>10.5</td>
+                <td>dd-mm-yy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="new-order" class="parent new-order">
+        <div class="head">
+          <header id="new-order-page-header" class="head">
+            <button type="button" id="new-order-page-back-btn" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h3>NEW ORDER</h3>
+          </header>
+        </div>
+        <div class="child">
+          <div class="table-div">
+            <h3>TAKE ORDER</h3>
+            <table id="new-order-table">
+              <thead>
+                <tr>
+                  <th>S.NO</th>
+                  <th>PRODUCT</th>
+                  <th>QUANTITY</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>product_name</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-btn">
+              <button type="submit" class="normal save">S</button>
+              <button type="button" class="normal cancel">B</button>
+            </div>
+          </div>
+          <div class="form-div">
+            <form action="">
+              <div class="label-div">
+                <label for="product-name">PRODUCT NAME : </label>
+                <label for="product-price">PRICE : </label>
+                <label for="quantity">QUANTITY : </label>
+                <label for="total">TOTAL : </label>
+              </div>
+              <div class="input-div">
+                <input
+                  id="product-name"
+                  type="text"
+                  placeholder="Product Name"
+                />
+                <input id="product-price" type="number" step="0.01" />
+                <input id="quantity" type="number" />
+                <input id="total" type="number" step="0.01" />
+              </div>
+              <div class="form-btn">
+                <button id="new-pro-add" type="button" class="normal save">
+                  S
+                </button>
+                <button
+                  id="new-pro-cancel "
+                  type="button"
+                  class="normal canncel"
+                >
+                  C
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
